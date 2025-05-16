@@ -79,6 +79,7 @@ return {
       "cssls",
       "protols",
       "sqlls",
+      "dartls",
     },
     handlers = {},
   },

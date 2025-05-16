@@ -17,11 +17,6 @@ end
 
 require "lazy_setup"
 
-
-vim.env.TERM = "xterm-256color"
-vim.env.DEBUG_CODEIUM = "fatal"
-
-
 vim.opt.relativenumber = false
 -- enforce global lanugage to english
 vim.opt.langmenu = "en_US.UTF-8"
@@ -29,4 +24,3 @@ vim.cmd "language en_US.UTF-8"
 -- wrap lines
 vim.opt.wrap = true
 vim.cmd [[colorscheme astrotheme]]
-

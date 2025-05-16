@@ -7,7 +7,7 @@ return {
 
     -- Required dependencies
     dependencies = {
-      "nvim-lua/plenary.nvim",     -- Common Lua functions
+      "nvim-lua/plenary.nvim", -- Common Lua functions
       "nvim-treesitter/nvim-treesitter", -- Code parsing
     },
 
@@ -15,33 +15,29 @@ return {
       -- Configure AI adapters (providers)
       adapters = {
         -- Setup Anthropic/Claude as an adapter
-        anthropic = function()
-          return require("codecompanion.adapters").extend("anthropic", {
-            env = {
-              -- Get API key from environment variable
-              -- Make sure to set: export ANTHROPIC_API_KEY="your-key-here"
-              -- api_key = os.getenv("ANTHROPIC_API_KEY"),
-            },
-          })
-        end,
+        -- anthropic = function()
+        --   return require("codecompanion.adapters").extend("anthropic", {
+        --     env = {
+        --       -- Get API key from environment variable
+        --       -- Make sure to set: export ANTHROPIC_API_KEY="your-key-here"
+        --       -- api_key = os.getenv("ANTHROPIC_API_KEY"),
+        --     },
+        --   })
+        -- end,
       },
 
       -- Configure different interaction strategies
       strategies = {
         chat = {
           -- Set Anthropic/Claude as the default chat adapter
-          adapter = "anthropic",
+          -- adapter = "anthropic",
+          adapter = "copilot",
         },
         inline = {
           -- Set Anthropic/Claude as the default inline adapter
-          adapter = "anthropic",
+          -- adapter = "anthropic",
+          adapter = "copilot",
         },
-      },
-
-      opts = {
-        -- Enable debug logging for troubleshooting
-        -- Options: "DEBUG", "INFO", "WARN", "ERROR"
-        log_level = "DEBUG",
       },
     },
   },
