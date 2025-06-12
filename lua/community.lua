@@ -1,4 +1,4 @@
 return {
   "AstroNvim/astrocommunity",
-  -- { import = "astrocommunity.recipes.ai" },
+  { import = "astrocommunity.recipes.picker-nvchad-theme" },
 }
