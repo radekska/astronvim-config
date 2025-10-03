@@ -18,7 +18,6 @@ return {
         callbacks = {
           ["github-cast"] = function(url_data)
             url_data.host = "github.com"
-            print(url_data)
 
             return require("gitlinker.hosts").get_github_type_url(url_data)
           end,
