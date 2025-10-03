@@ -15,6 +15,18 @@ return {
           -- mapping to call url generation
           mappings = "<leader>gy",
         },
+        callbacks = {
+          ["github-cast"] = function(url_data)
+            url_data.host = "github.com"
+            print(url_data)
+
+            return require("gitlinker.hosts").get_github_type_url(url_data)
+          end,
+          ["github-cruxmate"] = function(url_data)
+            url_data.host = "github.com"
+            return require("gitlinker.hosts").get_github_type_url(url_data)
+          end,
+        },
       }
     end,
     dependencies = "nvim-lua/plenary.nvim",
