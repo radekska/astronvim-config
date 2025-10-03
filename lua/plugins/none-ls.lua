@@ -14,7 +14,7 @@ return {
     opts.sources = require("astrocore").list_insert_unique(opts.sources, {
       -- Set a formatter
       null_ls.builtins.formatting.golines.with {
-        extra_args = { "-m", "180" },
+        extra_args = { "-m", "200" },
       },
       null_ls.builtins.formatting.sqlfluff.with {
         extra_args = { "--dialect", "postgres" },
