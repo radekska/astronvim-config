@@ -2,6 +2,9 @@ return {
   "saghen/blink.cmp",
   dependencies = {
     {
+      "Kaiser-Yang/blink-cmp-avante",
+    },
+    {
       "supermaven-inc/supermaven-nvim",
       opts = {
         disable_inline_completion = true, -- disables inline completion for use with cmp
@@ -14,8 +17,15 @@ return {
   },
   opts = {
     sources = {
-      default = { "lsp", "path", "snippets", "buffer", "copilot" },
+      default = { "avante", "lsp", "path", "snippets", "buffer", "copilot" },
       providers = {
+        avante = {
+          module = "blink-cmp-avante",
+          name = "Avante",
+          opts = {
+            -- options for blink-cmp-avante
+          },
+        },
         copilot = {
           name = "copilot",
           module = "blink-cmp-copilot",
