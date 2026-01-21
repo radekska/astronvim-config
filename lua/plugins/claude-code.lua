@@ -22,8 +22,13 @@ return {
     { "<leader>ad", "<cmd>ClaudeCodeDiffDeny<cr>", desc = "Deny diff" },
   },
   opts = {
+    -- Send/Focus Behavior
+    -- When true, successful sends will focus the Claude terminal if already connected
+    focus_after_send = true,
     terminal = {
       split_width_percentage = 0.40,
+      -- Native terminal should provide better performance and compatibility
+      provider = "native",
     },
   },
 }
