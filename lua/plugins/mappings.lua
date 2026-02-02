@@ -32,43 +32,43 @@ return {
           ["<Leader>h"] = { function() require("smart-splits").resize_left() end, desc = "Resize split left" },
           ["<Leader>;"] = { function() require("smart-splits").resize_right() end, desc = "Resize split right" },
           ["<C-'>"] = { "<Cmd>ToggleTerm direction=float<CR>", desc = "ToggleTerm float" },
-          ["<Leader>ac"] = {
-            function()
-              vim.fn.system {
-                "zellij",
-                "action",
-                "new-pane",
-                "--name",
-                "claude_code",
-                "--direction",
-                "right",
-                "--cwd",
-                vim.fn.getcwd(),
-                "--",
-                "claude",
-              }
-            end,
-            desc = "Spawn Claude Code pane",
-          },
-          ["<Leader>ar"] = {
-            function()
-              vim.fn.system {
-                "zellij",
-                "action",
-                "new-pane",
-                "--name",
-                "claude_code_resume",
-                "--direction",
-                "right",
-                "--cwd",
-                vim.fn.getcwd(),
-                "--",
-                "claude",
-                "--resume",
-              }
-            end,
-            desc = "Spawn Claude Code pane (resume)",
-          },
+          -- ["<Leader>ac"] = {
+          --   function()
+          --     vim.fn.system {
+          --       "zellij",
+          --       "action",
+          --       "new-pane",
+          --       "--name",
+          --       "claude_code",
+          --       "--direction",
+          --       "right",
+          --       "--cwd",
+          --       vim.fn.getcwd(),
+          --       "--",
+          --       "claude",
+          --     }
+          --   end,
+          --   desc = "Spawn Claude Code pane",
+          -- },
+          -- ["<Leader>ar"] = {
+          --   function()
+          --     vim.fn.system {
+          --       "zellij",
+          --       "action",
+          --       "new-pane",
+          --       "--name",
+          --       "claude_code_resume",
+          --       "--direction",
+          --       "right",
+          --       "--cwd",
+          --       vim.fn.getcwd(),
+          --       "--",
+          --       "claude",
+          --       "--resume",
+          --     }
+          --   end,
+          --   desc = "Spawn Claude Code pane (resume)",
+          -- },
           ["<Left>"] = { "<Left>" },
           ["<Right>"] = { "<Right>" },
           ["<Up>"] = { "<Up>" },
