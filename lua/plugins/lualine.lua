@@ -8,8 +8,10 @@ return {
         return gs and { added = gs.added, modified = gs.changed, removed = gs.removed }
       end
       -- Replace lualine's diff component with gitsigns-backed one
-      for _, section in ipairs(opts.sections.lualine_b or {}) do
-        if section[1] == "diff" or section == "diff" then section.source = gitsigns_source end
+      if opts.sections then
+        for _, section in ipairs(opts.sections.lualine_b or {}) do
+          if section[1] == "diff" or section == "diff" then section.source = gitsigns_source end
+        end
       end
       return opts
     end,
