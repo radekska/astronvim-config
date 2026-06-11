@@ -1,5 +1,6 @@
 return {
   "NickvanDyke/opencode.nvim",
+  version = "v0.10.2",
   dependencies = {
     -- Recommended for `ask()` and `select()`.
     -- Required for `snacks` provider.
@@ -28,7 +29,12 @@ return {
       function() require("opencode").select() end,
       { desc = "Execute opencode action…" }
     )
-    vim.keymap.set({ "n", "t" }, "<Leader>at", function() require("opencode").toggle() end, { desc = "Toggle opencode" })
+    vim.keymap.set(
+      { "n", "t" },
+      "<Leader>at",
+      function() require("opencode").toggle() end,
+      { desc = "Toggle opencode" }
+    )
 
     vim.keymap.set(
       { "n", "x" },
