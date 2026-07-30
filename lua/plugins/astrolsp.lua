@@ -81,6 +81,23 @@ return {
       "sqlls",
       "dartls",
     },
+    config = {
+      gopls = {
+        settings = {
+          gopls = {
+            hints = {
+              parameterNames = true,
+              assignVariableTypes = true,
+              compositeLiteralFields = true,
+              compositeLiteralTypes = true,
+              constantValues = true,
+              functionTypeParameters = true,
+              rangeVariableTypes = true,
+            },
+          },
+        },
+      },
+    },
     -- handlers = {
     --   gopols = function(_, opts)
     --     print("opts.capabilities:", vim.inspect(opts.capabilities))
