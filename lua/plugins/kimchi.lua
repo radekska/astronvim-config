@@ -2,11 +2,11 @@ return {
   "castai/kimchi-nvim",
   name = "kimchi.nvim",
   keys = {
-    { "<leader>kc", "<cmd>KimchiToggle<cr>", desc = "Toggle Kimchi terminal" },
-    { "<leader>kn", "<cmd>KimchiNew<cr>", desc = "New Kimchi session" },
-    { "<leader>kr", "<cmd>KimchiContinue<cr>", desc = "Continue last Kimchi session" },
-    { "<leader>kf", "<cmd>KimchiAttachFile<cr>", desc = "Attach file to Kimchi" },
-    { "<leader>ks", "<cmd>KimchiAttachSelection<cr>", desc = "Attach selection to Kimchi" },
+    { "<leader>okt", "<cmd>KimchiToggle<cr>", desc = "Toggle Kimchi terminal" },
+    { "<leader>okn", "<cmd>KimchiNew<cr>", desc = "New Kimchi session" },
+    { "<leader>okr", "<cmd>KimchiContinue<cr>", desc = "Continue last Kimchi session" },
+    { "<leader>okf", "<cmd>KimchiAttachFile<cr>", desc = "Attach file to Kimchi" },
+    { "<leader>oks", "<cmd>KimchiAttachSelection<cr>", desc = "Attach selection to Kimchi" },
   },
   config = function()
     require("kimchi").setup({

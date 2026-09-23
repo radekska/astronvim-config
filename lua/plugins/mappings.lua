@@ -5,6 +5,7 @@ return {
     opts = {
       mappings = {
         n = {
+          ["<Leader>o"] = false,
           ["<C-n>"] = { "<Cmd>Neotree toggle<CR>", desc = "Toggle Explorer" },
           ["<Leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
           ["<Leader>x"] = { function() require("astrocore.buffer").close() end, desc = "Close buffer" },
