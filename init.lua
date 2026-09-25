@@ -23,3 +23,6 @@ vim.opt.langmenu = "en_US.UTF-8"
 vim.cmd "language en_US.UTF-8"
 -- wrap lines
 vim.opt.wrap = true
+
+vim.cmd("colorscheme kanagawa")
+
